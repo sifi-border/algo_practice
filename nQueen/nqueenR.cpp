@@ -33,7 +33,7 @@ bool check(const vector<int> &board, int row, int col)
 	//斜め
 	Rep(1, col, j)
 	{
-		if (col - j >= 0 && (board[col-j] + j == board[col] || board[col-j] - j == board[col]))
+		if (board[col-j] + j == board[col] || board[col-j] - j == board[col])
 		{
 			return false;
 		}
