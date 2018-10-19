@@ -13,4 +13,4 @@
 - 関数型言語での実装
 - Nを横軸に実行時間をplot
 
-nyampass~
+質問・訂正などあれば[@sifi_border](https://twitter.com/sifi_border)までお願いします
