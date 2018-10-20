@@ -9,11 +9,12 @@
   - 結果`check`関数での斜め方向のcheckも実装が楽になった
   - `board[i-j] != i-j`と`board[i-j] != i+j`を見るだけなので
 ### 課題
+- 高速化（今だと`N<=13`が限界なので）
 - 回転・鏡像の判定の実装
 - 関数型言語での実装
 - Nを横軸に実行時間をplot
 
-## MortalFibonacci
+## Mortal Fibonacci
 - [Mortal Fibonacci Rabbits](http://rosalind.info/problems/fibd)
 - `N <= 100, M <= 20`と制約がかなり緩く、制限時間5分なので脳死解法(`O(NM^2)`)でも通る
   - 少し考えると子供の前計算をしておく`O(NM)`も思い浮かぶ
