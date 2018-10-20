@@ -15,10 +15,10 @@
 
 ## MortalFibonacci
 - [MortalFibonacci](http://rosalind.info/problems/fibd)
-- `N <= 100, M <= 20`と制約がかなり緩いので制限時間5分なので脳死解放(`O(NM^2)`)でも通る
+- `N <= 100, M <= 20`と制約がかなりく、制限時間5分なので脳死解法(`O(NM^2)`)でも通る
   - 少し考えると子供の前計算をしておく`O(NM)`も思い浮かぶ
 - これ[tdpcF](https://tdpc.contest.atcoder.jp/tasks/tdpc_semiexp)に似てるな...と気づき
-- 結局O(N)解が書けた
+- 結局`O(N)`解が書けた
   - `N, M <= 10^8`くらいまでなら全然耐える
   - 実は世代ごとに計算する必要はなくて、親と子だけ計算すれば良い
   - 親の総数はqueueを使って管理
