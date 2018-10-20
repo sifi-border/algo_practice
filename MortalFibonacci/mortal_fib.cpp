@@ -1,10 +1,11 @@
 /*
 http://rosalind.info/problems/fibd
 time computational complexity　O(N)Solver
-verified(N = 88, M = 16)
+verified(N = 88, M = 16, answer = 1083713730914271201)
 
 long long でも余裕で桁が溢れるのでMOD1000000007上で計算した方が現実味ある？
 */
+
 #include <iostream>
 #include <vector>
 #include <queue>
