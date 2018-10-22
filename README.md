@@ -15,8 +15,10 @@
 - Nを横軸に実行時間をplot
 
 ## Mortal Fibonacci
-- [Mortal Fibonacci Rabbits](http://rosalind.info/problems/fibd)
-- `N <= 100, M <= 20`と制約がかなり緩く、制限時間5分なので脳死解法(`O(NM^2)`)でも通る
+- 寿命がM世代で尽きる動物の、N世代後の総数を求める
+  - 成人するまでに`1`世代かかり、以降`M-2世代`に渡って子供を産む
+  - M->infとすると普通のfibonacci
+- 脳死解法は(`O(NM^2)`)
   - 少し考えると子供の前計算をしておく`O(NM)`も思い浮かぶ
 - これ[tdpcF](https://tdpc.contest.atcoder.jp/tasks/tdpc_semiexp)に似てるな...と気づき
 - 結局`O(N)`解が書けた

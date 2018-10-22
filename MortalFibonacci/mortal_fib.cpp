@@ -1,7 +1,10 @@
 /*
-http://rosalind.info/problems/fibd
+mortal fibonacci
+
+input N, M
+output 寿命がM世代で尽きる動物の、N世代後の総数
+
 time computational complexity　O(N)Solver
-verified(N = 88, M = 16, answer = 1083713730914271201)
 
 long long でも余裕で桁が溢れるのでMOD1000000007上で計算した方が現実味ある？
 */
