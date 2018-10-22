@@ -60,7 +60,7 @@ void solve(void)
 
 int main(void)
 {
-	cout << "Solving Mortal Fibonacci Rabbits..." << endl;
+	cout << "Solving Mortal Fibonacci Problem..." << endl;
 	solve();
 	cout << "yui(*-v・)yui" << endl;
 	return 0;
