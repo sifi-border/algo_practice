@@ -81,8 +81,6 @@ void solve(void)
 		}
 	}
 
-	cout << ni << ' ' << nj << endl;
-
 	string ans = "";
 
 	while(aliscore[ni][nj] > 0)
