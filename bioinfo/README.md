@@ -1,4 +1,4 @@
-# algo"rhythm"
+# bioinfo
 
 ## Mortal Fibonacci
 - 寿命が`M`世代で尽きる動物の、`N`世代後までの総数を求める
