@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdio>
+#include <cmath>
 #include <vector>
 
 using namespace std;
@@ -9,13 +10,14 @@ const int MAX = 200020;
 template<typename T>
 struct BIT
 {
-	int N;
+	int N, K;
 	vector<T> bit;
 
 	BIT (int X)
 	{
 		bit = vector<T>(X+1, 0);
 		N = X+1;
+		K = pow(2, (int)(log(X)/log(2)));
 	}
 
 	void add(int idx, T w)
@@ -31,6 +33,23 @@ struct BIT
 		T res = 0;
 		for (int x = idx; x > 0; x -= x&-x) res += bit[x];
 		return res;
+	}
+
+	int lb(T w)
+	{
+		int k = K, idx = 0;
+
+		while(k > 0)
+		{
+			if (idx + k <= N && w > bit[idx+k])
+			{
+				w -= bit[idx+k];
+				idx += k;
+			}
+			k >>= 1;
+		}
+
+		return idx+1;
 	}
 
 	void chmax(int idx, T w)
@@ -68,14 +87,9 @@ void solve(void)
 		}
 		else
 		{
-			int l = -1, r = MAX, mid = (l+r)/2;
-			while(abs(l-r)>1)
-			{
-				(bit.sum(mid) < X ? l : r) = mid;
-				mid = (l+r)/2;
-			}
-			cout << r << endl;
-			bit.add(r, -1);
+			int idx = bit.lb(X);
+			cout << idx << endl;
+			bit.add(idx, -1);
 		}
 	}
 
