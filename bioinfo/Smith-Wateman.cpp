@@ -48,7 +48,7 @@ void solve(void)
 	//二本のstrandの長さ
 	int l1 = s1.size(), l2 = s2.size();
 	//scoreを格納する二次元配列、０で初期化
-	vector<vector <int>> aliscore(l1+1, vector<int>(l2+1, 0));
+	vector<vector <int> > aliscore(l1+1, vector<int>(l2+1, 0));
 	//配列中の最高スコア
 	int max_score = 0;
 
@@ -59,7 +59,7 @@ void solve(void)
 			continue;
 		}
 		int res = 0;
-		res = max(res, aliscore[i-1][j-1] + (s1[i] == s2[j] ? 3 : -4));
+		res = max(res, aliscore[i-1][j-1] + (s1[i-1] == s2[j-1] ? 3 : -4));
 		res = max(res, aliscore[i][j-1] - 5);
 		res = max(res, aliscore[i-1][j] - 5);
 		aliscore[i][j] = res;
