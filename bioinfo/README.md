@@ -14,6 +14,6 @@
 ## Smith-Wateman
 - [link](https://en.wikipedia.org/wiki/Smith–Waterman_algorithm)
 - 解説追加するかも
-- （11/3）[7ma7x](https://github.com/7ma7X)さんにindex周りのミスを指摘していただきました.ありがとうございます.
+- （11/3）[@7ma7X](https://github.com/7ma7X)さんにindex周りのミスを指摘していただきました.ありがとうございます.
 
 質問・訂正などあれば[@sifi_border](https://twitter.com/sifi_border)までお願いします
