@@ -48,9 +48,14 @@ void solve(void)
 	//二本のstrandの長さ
 	int l1 = s1.size(), l2 = s2.size();
 	//scoreを格納する二次元配列、０で初期化
-	vector<vector <int> > aliscore(l1+1, vector<int>(l2+1, 0));
+	vector<vector <int>> aliscore(l1+1, vector<int>(l2+1, 0));
 	//配列中の最高スコア
 	int max_score = 0;
+
+	//wikiと同様のspスコアを適用する
+	//マッチ:+3
+	//アンマッチ:-3
+	//ギャップ:-2
 
 	for (int i = 0; i <= l1; i++) for (int j = 0; j <= l2; j++)
 	{
@@ -59,9 +64,9 @@ void solve(void)
 			continue;
 		}
 		int res = 0;
-		res = max(res, aliscore[i-1][j-1] + (s1[i-1] == s2[j-1] ? 3 : -4));
-		res = max(res, aliscore[i][j-1] - 5);
-		res = max(res, aliscore[i-1][j] - 5);
+		res = max(res, aliscore[i-1][j-1] + (s1[i-1] == s2[j-1] ? 3 : -3));
+		res = max(res, aliscore[i][j-1] - 2);
+		res = max(res, aliscore[i-1][j] - 2);
 		aliscore[i][j] = res;
 		max_score = max(max_score, res);
 	}
@@ -85,24 +90,32 @@ void solve(void)
 
 	while(aliscore[ni][nj] > 0)
 	{
-		if (s1[ni] == s2[nj] || aliscore[ni][nj] == aliscore[ni-1][nj-1] - 4)
+		if (s1[ni-1] == s2[nj-1] || aliscore[ni][nj] == aliscore[ni-1][nj-1] - 3)
 		{
 			ans.push_back(s1[ni]);
 			ni--;
 			nj--;
 			continue;
 		}
-		if (aliscore[ni][nj] == aliscore[ni][nj-1] - 5)
+		if (aliscore[ni][nj] == aliscore[ni][nj-1] - 2)
 		{
 			nj--;
 			continue;
 		}
-		if (aliscore[ni][nj] == aliscore[ni-1][nj] - 5)
+		if (aliscore[ni][nj] == aliscore[ni-1][nj] - 2)
 		{
 			ni--;
 			continue;
 		}
 	}
+
+	/* table
+	for (int i = 0; i <= l1; i++) for (int j = 0; j <= l2; j++)
+	{
+		printf("%3d", aliscore[i][j]);
+		putchar(j != l2 ? ' ' : '\n');
+	}
+	*/
 
 	reverse(ans.begin(), ans.end());
 
