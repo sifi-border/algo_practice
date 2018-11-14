@@ -95,6 +95,7 @@ struct SBV
 	{
 		uint64_t p = pos-1;
 		assert((b == 0 || b == 1) && p < N && preproisdone);
+		//多分違っている
 		uint64_t res = RL[p/L_sz] + RS[p/S_sz] + popcount(Bit[p/N_block_sz] << (S_sz-(p%S_sz)-1));
 		if (b == 0) res = p-res+1;
 		return res;
