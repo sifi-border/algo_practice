@@ -22,6 +22,7 @@ bioinfoっぽい題材の問題とかアルゴリズムとか
 ## data_structure
 競技プログラミングで使うデータ構造とか
 - BIT(Binary Indexed Tree)
+- SBV(Succinct Bit Vector)
 
 
 質問・訂正などあれば[@sifi_border](https://twitter.com/sifi_border)までお願いします

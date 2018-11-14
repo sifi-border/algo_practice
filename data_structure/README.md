@@ -8,6 +8,12 @@
   - x & -x で一番右端に立っているbitが求まる
 - BIT上で二分探索することでsetのk番目の数が`O(logN)`で求まる
 - 最大値についても、一点更新と区間のgetmaxが`O(logN)`で求まる
-- **1-indexed**なので注意
+- **1-indexedなので注意**
+
+## SBV/簡潔ビットベクトル(作成中...)
+- [詳細](http://d.hatena.ne.jp/takeda25/20140201/1391250137#20140201fn5)
+- 簡潔データ構造=bit数に比例した空間計算量
+	- Nbitだと`N+o(N)`bitのメモリで良い($lim_{N\to\infty} o(N) = N$)
+- rank,selectがO(1)
 
 質問・訂正などあれば[@sifi_border](https://twitter.com/sifi_border)までお願いします
