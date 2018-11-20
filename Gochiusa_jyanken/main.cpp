@@ -24,7 +24,7 @@ struct player
 	player (string init_card)
 	{
 		res = 6;
-		hand = (1<<7)-1;
+		hand = (1<<6)-1;
 		score = 0;
 		cards = init_card;
 	}
@@ -32,7 +32,7 @@ struct player
 	void reset()
 	{
 		res = 6;
-		hand = (1<<7)-1;
+		hand = (1<<6)-1;
 		score = 0;
 	}
 
@@ -69,7 +69,7 @@ struct player
 
 		assert(idx >= 0 && hand>>idx & 1);
 
-		int mask = ((1<<7)-1)^(1<<idx);
+		int mask = ((1<<6)-1)^(1<<idx);
 
 		hand &= mask;
 
