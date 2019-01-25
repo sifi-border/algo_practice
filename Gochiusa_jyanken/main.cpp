@@ -81,7 +81,7 @@ struct player
 
 };
 
-void judge(player& p, player&q)
+void judge(player& p, player& q)
 {
 	assert(p.res > 0 && p.res == q.res);
 
