@@ -27,8 +27,8 @@ struct unionfind
 
 	void unite(int u, int v)
 	{
-		if (same(u, v)) return;
 		u = root(u), v = root(v);
+		if (u == v) return;
 		if (rank[u] > rank[v]) swap(u, v);
 		par[u] = v;
 		rank[v] += rank[u];
