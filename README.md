@@ -44,6 +44,7 @@ bioinfoっぽい題材の問題とかアルゴリズムとか
 ## data_structure
 競技プログラミングで使うデータ構造とか
 - BIT(Binary Indexed Tree)
+- UnionFind
 - SBV(Succinct Bit Vector)
 
 
