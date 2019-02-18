@@ -10,6 +10,15 @@
 - 最大値についても、一点更新と区間のgetmaxが`O(logN)`で求まる
 - **1-indexedなので注意**
 
+## Matrix
+- 行列演算用ライブラリ
+	- [半環ならok](https://www.hamayanhamayan.com/entry/2017/03/08/160757)
+- 単位元に注意
+	- 例えば(非負整数,xor,and)なら `plus_base = 0, mul_base = 0b1111111...1`
+TODO
+- rankを求める
+- det(行列式)を求める
+
 ## ModStructure
 - 俗に言うMod取り構造体
 - 代入演算子以外はほぼ網羅している（多分）
