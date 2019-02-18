@@ -10,6 +10,16 @@
 - 最大値についても、一点更新と区間のgetmaxが`O(logN)`で求まる
 - **1-indexedなので注意**
 
+## ModStructure
+- 俗に言うMod取り構造体
+- 代入演算子以外はほぼ網羅している（多分）
+- 法とする整数はコンパイル時に決定していないと使えないので注意
+- 参考にした提出
+	- https://atcoder.jp/contests/dp/submissions/3943361
+	- https://atcoder.jp/contests/dp/submissions/3942402
+- pが素数である場合、拡張ユークリッドの互除法を用いて逆元が`O(log(x))`で求まる
+	- 再帰を使うのが一般的っぽいがtouristのコードを参考にwhileで実装した
+
 ## UnionFind/DisjointSet
 - 二つの要素が同じ集合に属しているかを`O(α(N))`で判定
 	- 経路圧縮+rank（集合の要素の多い方にMerge）
